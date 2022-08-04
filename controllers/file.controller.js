@@ -1,10 +1,12 @@
-export default class FileController{
+class FileController {
   //I'm using DI here, so we can change the transformerFunction whenever we want it :)
-  constructor(transformerFunction){ 
+  constructor(transformerFunction) {
     this.transformerFunction = transformerFunction;
   }
 
   get = (req, res) => {
     res.send("Get: File");
-  }
+  };
 }
+
+module.exports = FileController;

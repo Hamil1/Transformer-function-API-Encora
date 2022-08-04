@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3010;
-const path = require('path');
-const router = require('./routes');
+const path = require("path");
+const router = require("./routes");
 
 // app.use(express.static('static'));
 

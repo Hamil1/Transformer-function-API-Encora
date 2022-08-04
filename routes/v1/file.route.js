@@ -1,10 +1,10 @@
-import { Router } from 'express';
-import FileController from '../../controllers/file.controller'
-import transformerFunction from '../../utils/transformerFunction'
+const Router = require("express").Router;
+const FileController = require("../../controllers/file.controller");
+const transformerFunction = require("../../utils/transformerFunction");
 
 const fileRouter = Router();
-const fileController = new FileController(transformerFunction);//passing our transformer function to the controller
+const fileController = new FileController(transformerFunction); //passing our transformer function to the controller
 
-fileRouter.get('/', fileController.get);
+fileRouter.get("/", fileController.get);
 
-export default fileRouter;
+module.exports = fileRouter;
