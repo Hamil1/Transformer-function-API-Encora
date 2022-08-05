@@ -27,6 +27,7 @@ class FileController {
           .send("Error in the server, please reach out to the administrator");
       })
       .on("end", () => {
+        this.transformerFunction();
         res.status(200).json(results);
       });
   };
