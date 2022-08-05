@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 const port = 3010;
-const cors = require("cors");
 const router = require("./routes");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
+const path = require('path')
 
 // enable files upload
 app.use(
@@ -13,7 +13,6 @@ app.use(
   })
 );
 
-app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
